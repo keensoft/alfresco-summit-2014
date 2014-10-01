@@ -1,0 +1,18 @@
+<extension>
+	<modules>
+		<module>
+			<id>Hide Create Site</id>
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco.components.dashlets</targetPackageRoot>
+					<sourcePackageRoot>es.keensoft.components.dashlets</sourcePackageRoot>
+				</customization>
+				<customization>
+					<targetPackageRoot>org.alfresco.share.header</targetPackageRoot>
+					<sourcePackageRoot>es.keensoft.share.header</sourcePackageRoot>
+				</customization>
+			</customizations>
+			<auto-deploy>true</auto-deploy>
+		</module>
+	</modules>
+</extension>

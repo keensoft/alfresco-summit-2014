@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+
+	<bean id="${project.artifactId}-ContentBehavior"
+		class="es.keensoft.alfresco.behaviour.ContentBehaviour"
+		init-method="init">
+		<property name="policyComponent" ref="policyComponent" />
+		<property name="nodeService" ref="NodeService" />
+		<property name="mimetypeService" ref="MimetypeService" />
+	</bean>
+
+</beans>

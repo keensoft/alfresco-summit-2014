@@ -1,0 +1,14 @@
+<extension>
+	<modules>
+		<module>
+			<id>Custom Site Props</id>
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco.modules</targetPackageRoot>
+					<sourcePackageRoot>es.keensoft.modules</sourcePackageRoot>
+				</customization>
+			</customizations>
+			<auto-deploy>true</auto-deploy>
+		</module>
+	</modules>
+</extension>

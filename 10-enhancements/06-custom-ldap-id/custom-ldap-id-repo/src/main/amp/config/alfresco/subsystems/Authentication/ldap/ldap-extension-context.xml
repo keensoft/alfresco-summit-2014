@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+
+   <bean id="authenticationComponent" 
+      class="es.keensoft.repo.security.authentication.ldap.CustomDNLDAPAuthenticationComponentImpl"
+      parent="authenticationComponentBase">
+      <property name="id">
+         <value>${instancePath}</value>
+      </property>
+      <property name="active">
+         <value>${ldap.authentication.active}</value>
+      </property>
+      <property name="LDAPInitialDirContextFactory">
+         <ref bean="ldapInitialDirContextFactory" />
+      </property>
+      <property name="userNameFormat">
+         <value>${ldap.authentication.userNameFormat}</value>
+      </property>
+      <property name="ldapNameResolver">
+         <ref bean="userRegistry" />
+      </property>
+      <property name="nodeService">
+         <ref bean="nodeService" />
+      </property>
+      <property name="personService">
+         <ref bean="personService" />
+      </property>
+      <property name="transactionService">
+         <ref bean="transactionService" />
+      </property>
+      <property name="escapeCommasInBind">
+         <value>${ldap.authentication.escapeCommasInBind}</value>
+      </property>
+      <property name="escapeCommasInUid">
+         <value>${ldap.authentication.escapeCommasInUid}</value>
+      </property>
+      <property name="allowGuestLogin">
+         <value>${ldap.authentication.allowGuestLogin}</value>
+      </property>
+      <property name="defaultAdministratorUserNameList">
+         <value>${ldap.authentication.defaultAdministratorUserNames}</value>
+      </property>
+      <!-- mailDomain, targeted DN pattern -->
+      <property name="mailDomainLdapMapping">
+          <map>
+              <entry key="aragon.es" value="o=aragon.es,o=isp"/>
+              <entry key="educa.aragon.es" value="o=educa.aragon.es,o=isp"/>
+              <entry key="salud.aragon.es" value="o=salud.aragon.es,o=isp"/>
+              <entry key="ext.aragon.es" value="o=dga,o=isp"/>
+          </map>
+      </property>
+   </bean>
+
+</beans>

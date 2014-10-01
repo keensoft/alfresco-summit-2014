@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="ks:custom-model" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+	<description>Sample model for original creation and modification dates</description>
+	<author>keensoft</author>
+	<version>1.0</version>
+
+	<imports>
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+	</imports>
+
+	<namespaces>
+		<namespace uri="http://www.alfresco.com/model/custom-model/1.0" prefix="ks" />
+	</namespaces>
+	
+	<aspects>
+		<aspect name="ks:importedDoc">
+			<properties>
+				<property name="ks:originalCreationDate">
+					<type>d:date</type>
+				</property>
+				<property name="ks:originalModificationDate">
+					<type>d:date</type>
+				</property>
+			</properties>
+		</aspect>
+	</aspects>
+	
+</model>

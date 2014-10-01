@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+	<bean id="extension.model.dictionaryBootstrap" parent="dictionaryModelBootstrap"
+		depends-on="dictionaryBootstrap">
+		<property name="models">
+			<list>
+				<value>alfresco/extension/model/custom-model.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Office 2007+ -->
+	<bean id="extracter.Poi" class="org.alfresco.repo.content.metadata.PoiMetadataExtracter"
+		parent="baseMetadataExtracter">
+		<property name="inheritDefaultMapping">
+			<value>true</value>
+		</property>
+		<property name="mappingProperties">
+			<props>
+				<prop key="namespace.prefix.ks">http://www.alfresco.com/model/custom-model/1.0</prop>
+				<prop key="Creation-Date">ks:originalCreationDate</prop>
+				<prop key="Last-Modified">ks:originalModificationDate</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
