@@ -28,7 +28,7 @@ public class ImapContentBehaviour implements NodeServicePolicies.OnUpdatePropert
 		if (before.get(ContentModel.PROP_TITLE) == null ||
 		   !before.get(ContentModel.PROP_TITLE).equals(after.get(ContentModel.PROP_TITLE))) {
 			
-			String intendedName = nodeService.getProperty(nodeRef, ContentModel.PROP_TITLE) + ".elm";
+			String intendedName = nodeService.getProperty(nodeRef, ContentModel.PROP_TITLE) + ".eml";
 			
 			try {
 				fileFolderService.rename(nodeRef, intendedName);
