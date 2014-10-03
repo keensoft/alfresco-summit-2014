@@ -46,7 +46,7 @@ The repository contains a folder for each session. Within that, there is a direc
 * [6. Custom LDAP identification](https://github.com/keensoft/alfresco-summit-2014/tree/master/10-enhancements/06-custom-ldap-id)
 * [5. PDF/A transformation](https://github.com/keensoft/alfresco-summit-2014/tree/master/10-enhancements/05-pdfa-transformer)
 * [4. Importing original dates](https://github.com/keensoft/alfresco-summit-2014/tree/master/10-enhancements/04-import-original-dates)
-* [3. Custom ELM node names](https://github.com/keensoft/alfresco-summit-2014/tree/master/10-enhancements/03-rename-on-imap-creation)
+* [3. Custom EML node names](https://github.com/keensoft/alfresco-summit-2014/tree/master/10-enhancements/03-rename-on-imap-creation)
 * [2. Site custom properties](https://github.com/keensoft/alfresco-summit-2014/tree/master/10-enhancements/02-custom-site-props)
 * [1. Site templates with folders](http://ecmarchitect.com/archives/2014/04/04/3687) (external Jeff Potts)
 
