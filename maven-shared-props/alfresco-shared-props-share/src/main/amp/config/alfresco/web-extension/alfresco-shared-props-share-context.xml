@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+
+    <bean id="alfresco-shared-props-share-test" class="es.keensoft.share.Test" init-method="init">
+        <property name="verifier" value="${verifier.name}" />
+    </bean>
+        
+</beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>alfresco-shared-props-repo</artifactId>
+    <name>alfresco-shared-props-repo AMP project</name>
+    <packaging>amp</packaging>
+    <description>Manages the lifecycle of the alfresco-shared-props-repo AMP (Alfresco Module Package)</description>
+
+    <parent>
+        <groupId>es.keensoft.alfresco</groupId>
+        <artifactId>alfresco-shared-props</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <alfresco.client.war>alfresco</alfresco.client.war>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+               <artifactId>maven-antrun-plugin</artifactId>
+               <executions>
+                 <execution>
+                   <phase>package</phase>
+                   <goals>
+                     <goal>run</goal>
+                   </goals>
+                   <configuration>
+                     <tasks>
+                         <copy todir="${dist}/${env}/amps" failonerror="false">
+                            <fileset dir="${basedir}/target">
+                                <include name="*.amp"/>
+                            </fileset>
+                        </copy>
+                     </tasks>
+                   </configuration>
+                 </execution>
+               </executions>
+            </plugin>
+        </plugins>  
+    </build>
+
+</project>
